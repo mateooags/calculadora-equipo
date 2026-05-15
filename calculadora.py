@@ -1,23 +1,17 @@
-num1=float(input("ingrese el primer numero:"))
-num2=float(input("Ingrese el segundo numero:"))
-print ("operaciones")
-print ("1: Suma")
-print ("2: Resta")
-print ("3: multiplicacion")
-print ("4: division")
-operacion = input("Elige una operacion:")
-if (operacion == "1"):
-    resultado = num1+num2
-    print(resultado)
-elif (operacion == "2"):
-    resultado = num1-num2
-    print(resultado)
-elif (operacion == "3"):
-    resultado = num1*num2
-    print(resultado)
-elif (operacion == "4"):
-    resultado = num1 / num2
-if (num2 !=0):
-    print (resultado)
+num1 = float(input("Ingrese el primer número: "))
+operacion = input("Ingrese la operación (+, -, x, /): ")
+num2 = float(input("Ingrese el segundo número: "))
+if operacion=="+":
+    print("Resultado:", num1+num2)
 else:
-    print("Error, el numero es 0")
+    if operacion=="-":
+        print("Resultado:", num1-num2)
+    else:
+        if operacion=="x":
+            print("Resultado:", num1*num2)
+        else:
+            if operacion=="/":
+                if num2!= 0:
+                    print("Resultado:", num1/num2)
+                else:
+                    print("No se puede dividir por cero. Operacion invalida")
